@@ -1,20 +1,13 @@
-<?php
-
-$mysqlUserName      = "adminer";
-$mysqlPassword      = "Test1234";
-$mysqlHostName      = "localhost";
-$DbName             = "kanboard";
-$backup_name        = "test.sql";
-
-echo "test";
-
-backupDatabase($mysqlHostName,$mysqlUserName,$mysqlPassword,$DbName,$backup_name);
-
-function backupDatabase($mysqlHostName,$mysqlUserName,$mysqlPassword,$mysqlDatabaseName,$mysqlExportPath) {
-
-    $command='mysqldump --opt -h' .$mysqlHostName .' -u' .$mysqlUserName .' -p' .$mysqlPassword .' ' .$mysqlDatabaseName .' > ' .$mysqlExportPath;
-    exec($command,$output=array(),$worked);
-
-    echo "worked";
-
-}
+<form action="backup.php" method="post">
+    MySQL Hostname:<br>
+    <input type="text" name="mysqlHostName" value="localhost"><br>
+    MySQL Username:<br>
+    <input type="text" name="mysqlUserName" value="adminer"><br>
+    MySQL Passwort:<br>
+    <input type="password" name="mysqlPassword" value="Test1234"><br>
+    MySQL Datenbankname:<br>
+    <input type="text" name="DbName" value="mysql"><br>
+    Backup Dateiname:<br>
+    <input type="text" name="backup_name" value="test"><br>
+    <input type="submit"<br>
+</form>
