@@ -4,6 +4,7 @@
 </head>
 <body>
 <?php
+session_start();
 
 $backupName = "backups/" . $_POST["backup_name"] . ".sql";
 
@@ -22,19 +23,11 @@ exec($command);
 
 echo "-- Dump completed -- ";
 
+$_SESSION["backupFile"] = $backupName;
+
 ?>
 
-<button onclick="onButtonCall()">Download File</button>
-<script>
-    function onButtonCall() {
-        $.ajax({ url: 'download.php',
-            data: {action: 'downloadFile', fileName: "<?=$backupName?>"},
-            type: 'post',
-            success: function(output) {
-                alert(output);
-            }
-        });
-    }
-</script>
+<button type="button" onclick="location.href='download.php'">Download File</button>
+
 </body>
 </html>
