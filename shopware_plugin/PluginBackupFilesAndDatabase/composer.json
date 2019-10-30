@@ -1,0 +1,31 @@
+{
+  "name": "swag/plugin-backup-files-and-database",
+  "description": "Plugin to Backup Files and Database",
+  "version": "v1.0.0",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kevin"
+    }
+  ],
+  "require": {
+    "shopware/core": "*"
+  },
+  "extra": {
+    "shopware-plugin-class": "Swag\\PluginBackupFilesAndDatabase\\PluginBackupFilesAndDatabase",
+    "label": {
+      "de-DE": "Backup Plugin",
+      "en-GB": "Backup Plugin"
+    },
+    "description": {
+      "de-DE": "Ein Plugin, welches Backups von Dateien und der Datenbank macht.",
+      "en-GB": "A plugin. which backups files and the database."
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Swag\\PluginBackupFilesAndDatabase\\": "src/"
+    }
+  }
+}
