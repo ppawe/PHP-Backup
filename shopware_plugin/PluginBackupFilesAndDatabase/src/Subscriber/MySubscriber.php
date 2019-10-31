@@ -13,7 +13,13 @@ class MySubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents(): array
     {
         return [
-
+            ProductEvents::PRODUCT_LOADED_EVENT => 'onProductsLoaded'
         ];
     }
+
+    public function onProductsLoaded(EntityLoadedEvent $event)
+    {
+
+    }
+
 }

@@ -12,5 +12,10 @@
             <label>Example Label EN</label>
             <label lang="de-DE">Beispiel Label DE</label>
         </input-field>
+        <input-field>
+            <name>2example</name>
+            <label>2Example Label EN</label>
+            <label lang="de-DE">2Beispiel Label DE</label>
+        </input-field>
     </card>
 </config>
