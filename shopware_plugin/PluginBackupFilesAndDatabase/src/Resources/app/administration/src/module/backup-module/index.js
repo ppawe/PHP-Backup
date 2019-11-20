@@ -16,7 +16,7 @@ Shopware.Module.register('backup-module', {
 
     routes: {
         overview: {
-            component: 'test-component',
+            component: 'test',
             path: 'overview'
         },
     },

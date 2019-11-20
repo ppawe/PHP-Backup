@@ -1,2 +1,2 @@
 import './module/backup-module';
-import './module/backup-module/page/test-component';
+import './module/backup-module/page/backup-manager/test';
