@@ -5,32 +5,6 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <!-- In diesem Teil wird ein Subscriber registriert
-        <service id="Swag\PluginBackupFilesAndDatabase\Subscriber\MySubscriber">
-            <tag name="kernel.event_subscriber" />
-        </service>
 
-        Hier wird ein Service registrier
-        <service id="Swag\PluginBackupFilesAndDatabase\Service\MyService" />
-
-        Hier wird die Verwendung eines Services in einem Controller markiert
-        <service id="Swag\PluginBackupFilesAndDatabase\Controller\MyController" public="true">
-            <argument type="service" id="Swag\PluginBackupFilesAndDatabase\Service\MyService" />
-        </service>
-
-        MyTask registrieren -->
-        <service id="Swag\PluginBackupFilesAndDatabase\ScheduledTask\MyTask">
-            <tag name="shopware.scheduled.task" />
-        </service>
-
-        <!-- MyTask an MyTaskHandler vergeben -->
-        <service id="Swag\PluginBackupFilesAndDatabase\ScheduledTask\MyTaskHandler">
-            <argument type="service" id="scheduled_task.repository" />
-            <tag name="messenger.message_handler" />
-        </service>
-
-        <!--<service id="Swag\PluginBackupFilesAndDatabase\Core\Content\Backup\BackupDefinition">
-            <tag name="shopware.entity.definition" entity="swag_backup" />
-        </service>-->
     </services>
 </container>
